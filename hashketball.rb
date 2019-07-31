@@ -118,35 +118,36 @@ end
 
 
 
-=begin
+
 def num_points_scored(player_name)
-  
-  stats = game_hash
-  
-  stats.each do |place, team|
+  game_hash.each do |place, team|
     team.each do |key, value|
       
-      if key = :players
+      if key == :players
         value.each do |attributes|
-          if attributes[:player] == player_name
-            return attributes[:points]
-          end
-        end
+          return attributes[:points] if attributes[:player] == player_name
+      end
       end 
     end
   end
 end
-=end
 
+
+
+=begin
 def num_points_scored(name)
    
    
-   game_hash.each do |key,value|
-    
-     if value[:players][0][:player] == name 
-       return value[:players][0][:points]
+   game_hash.each do |place, team|
+     team.each do |key, value|
+       binding.pry 
+        if value[:players][0][:player] == name 
+           return value[:players][0][:points]
+        end
      end
-    binding.pry
    end
 end
+=end
 
+def team_colors()
+end
