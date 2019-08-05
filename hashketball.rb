@@ -135,7 +135,7 @@ end
 
 
 
-=begin
+
 def num_points_scored(name)
    
    
@@ -348,11 +348,7 @@ def big_shoe_rebounds
   num_rebounds
 end
 
-# # Bonus Questions
 
-# # Since there are multiple bonus questions that ask me
-# # to return the name of a player with the most of some stat, I can use the following methods
-# # to DRY (don't repeat yourself) up my code.
 
 def iterate_through_players_for(name, statistic)
   game_hash.each do |_team, game_data|
@@ -388,9 +384,7 @@ def most_points_scored
 end
 
 def winning_team
-  # Set up a hash to keep track of the points scored by each team. This way, we
-  # can iterate through each player, get their points scored, and increase the
-  # count in the hash.
+ 
 
   scores = { 'Brooklyn Nets' => 0, 'Charlotte Hornets' => 0 }
 
@@ -407,7 +401,7 @@ def player_with_longest_name
   player_with_most_of(:player_name)
 end
 
-# # Super Bonus Question
+
 
 def long_name_steals_a_ton?
   player_with_most_of(:steals) == player_with_most_of(:player_name)
